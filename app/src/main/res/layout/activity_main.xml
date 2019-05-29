@@ -18,13 +18,14 @@
         
         
         <android.support.design.widget.TabLayout
+                android:id="@+id/tablayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/colorPrimary"
                 app:tabIndicatorHeight="3dp"
                 app:tabIndicatorColor="@color/white"
                 app:tabSelectedTextColor="@color/white"
-                app:tabTextColor="#7cada7"
+                app:tabTextColor="@color/tab_unselected"
                 >
                 
                 <android.support.design.widget.TabItem
@@ -36,21 +37,26 @@
                 <android.support.design.widget.TabItem
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Chats"
+                        android:text="@string/chats"
                         />
                 
                 <android.support.design.widget.TabItem
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Status" />
+                        android:text="@string/status" />
         
                 <android.support.design.widget.TabItem
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Calls" />
+                        android:text="@string/calls" />
 
 
         </android.support.design.widget.TabLayout>
+        
+        <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
 
 
 
