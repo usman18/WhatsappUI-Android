@@ -9,6 +9,7 @@ public class Chat {
 	public Chat() {
 	}
 	
+	
 	public Chat(String name, String lastMessage, String lastMessageTime) {
 		this.name = name;
 		this.lastMessage = lastMessage;
