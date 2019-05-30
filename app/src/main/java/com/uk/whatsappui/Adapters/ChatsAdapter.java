@@ -6,6 +6,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -38,6 +40,11 @@ public class ChatsAdapter extends RecyclerView.Adapter<ChatsAdapter.ChatsViewHol
 		
 		Chat chat = chats.get(i);
 		
+		if (chat.getName() == null) {
+			//It is just a footer
+			chatsViewHolder.chatLayoutContainer.setVisibility(View.INVISIBLE);
+		}
+		
 		Glide.with(context)
 			.load(chat.getImage())
 			.apply(new RequestOptions().placeholder(R.drawable.profile))
@@ -63,17 +70,16 @@ public class ChatsAdapter extends RecyclerView.Adapter<ChatsAdapter.ChatsViewHol
 		TextView tvName;
 		TextView tvMsg;
 		TextView tvTime;
-		
+		RelativeLayout chatLayoutContainer;
 		
 		ChatsViewHolder(@NonNull View itemView) {
 			super(itemView);
 		
-			
 			profilePic = itemView.findViewById(R.id.profile_image);
 			tvName = itemView.findViewById(R.id.tvName);
 			tvMsg = itemView.findViewById(R.id.tvLastMsg);
 			tvTime = itemView.findViewById(R.id.tvTime);
-			
+			chatLayoutContainer = itemView.findViewById(R.id.chat_row_container);
 		}
 	}
 }

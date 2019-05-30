@@ -46,12 +46,17 @@ public class MainActivity extends AppCompatActivity {
 		
 		viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
 		
+		
 		tabLayout.addOnTabSelectedListener(new TabLayout.BaseOnTabSelectedListener() {
 			@Override
 			public void onTabSelected(TabLayout.Tab tab) {
 				if (tab.getPosition() == 0) {
 					tab.setIcon(getResources().getDrawable(R.drawable.ic_action_camera));
 				}
+				if (viewPager.getCurrentItem() != tab.getPosition()) {
+					viewPager.setCurrentItem(tab.getPosition());
+				}
+				
 			}
 			
 			@Override
