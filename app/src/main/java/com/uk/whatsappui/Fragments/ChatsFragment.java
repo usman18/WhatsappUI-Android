@@ -46,14 +46,14 @@ public class ChatsFragment extends Fragment {
 		chats.add(new Chat("Rohan", "Call me when you are free", "5/14/19"));
 		chats.add(new Chat("Ali", "That is lit!", "5/20/19"));
 		chats.add(new Chat(MainActivity.profileUrls[3],"Conor McGregor", "I'm in Dublin. Training for July bout.", "5/22/19"));
-		//Adding footers
-		chats.add(new Chat());
-		chats.add(new Chat());
 		
+		for (int i = 0; i < 20; i++) {
+			chats.add(new Chat("Some Name", "Some Message", "4/20/19"));
+		}
 		
+
 		adapter = new ChatsAdapter(getContext(), chats);
 		rvChats.setLayoutManager(new LinearLayoutManager(getContext()));
-		rvChats.setHasFixedSize(true);
 		rvChats.setAdapter(adapter);
 		
 	
