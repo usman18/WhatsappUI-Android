@@ -1,18 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent" android:layout_height="match_parent">
+        android:orientation="vertical">
+        
+        <RelativeLayout
+                android:id="@+id/chat_row_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fafafa"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="16dp"
+                xmlns:android="http://schemas.android.com/apk/res/android" >
+                
+                <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profile_image"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/profile"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="16dp"
+                        />
+                
+                
+                <TextView
+                        android:id="@+id/tvName"
+                        android:layout_toEndOf="@id/profile_image"
+                        android:layout_toStartOf="@id/tvTime"
+                        android:layout_width="wrap_content"
+                        android:maxLines="1"
+                        android:layout_marginTop="4dp"
+                        android:layout_height="wrap_content"
+                        android:text="My Status"
+                        android:textStyle="bold"
+                        android:textColor="#202020"
+                        android:textSize="15sp"
+                        />
+                
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvName"
+                        android:layout_toEndOf="@id/profile_image"
+                        android:text="Tap to add status update"
+                        android:ellipsize="end"
+                        android:layout_marginEnd="6dp"
+                        android:textColor="#737373"
+                        android:maxLines="1"
+                        android:layout_marginTop="1dp"
+                        />
+                
+        </RelativeLayout>
         
         <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:text="Status"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:layout_editor_absoluteX="163dp" />
-</android.support.constraint.ConstraintLayout>
+                android:background="#f4f4f4"
+                android:textColor="#6f6f6f"
+                android:textStyle="bold"
+                android:text="Recent updates"
+                android:paddingStart="16dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:paddingEnd="16dp"
+                />
+        
+        
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        
+</LinearLayout>
