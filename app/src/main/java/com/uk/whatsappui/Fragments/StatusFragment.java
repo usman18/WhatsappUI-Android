@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.uk.whatsappui.Activities.MainActivity;
 import com.uk.whatsappui.Adapters.StatusAdapter;
 import com.uk.whatsappui.Model.Status;
 import com.uk.whatsappui.R;
@@ -39,9 +40,10 @@ public class StatusFragment extends Fragment {
 		rvStatus.setLayoutManager(new LinearLayoutManager(getContext()));
 		adapter = new StatusAdapter(getContext(), statusList);
 		
-		for (int i = 0; i < 5; i++) {
-			statusList.add(new Status("Robert", "10 minutes ago"));
-		}
+		statusList.add(new Status(MainActivity.profileUrls[3], "Conor McGregor", "5 minutes ago"));
+		statusList.add(new Status(MainActivity.profileUrls[1], "Joe Rogan", "30 minutes ago"));
+		statusList.add(new Status(MainActivity.profileUrls[2], "Elon Musk", "Today, 10:15 PM"));
+		statusList.add(new Status(MainActivity.profileUrls[0], "Arnold", "Today, 6:15 AM"));
 		
 		rvStatus.setAdapter(adapter);
 	
