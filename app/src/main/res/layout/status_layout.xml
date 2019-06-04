@@ -28,6 +28,15 @@
                                 android:layout_marginEnd="16dp"
                                 android:layout_marginBottom="16dp"
                                 />
+        
+        
+                        <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_action_add"
+                                android:layout_alignEnd="@id/profile_image"
+                                android:layout_alignBottom="@id/profile_image"
+                                />
                         
                         
                         <TextView
