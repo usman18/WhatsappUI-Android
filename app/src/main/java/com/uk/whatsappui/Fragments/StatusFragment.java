@@ -44,6 +44,14 @@ public class StatusFragment extends Fragment {
 		statusList.add(new Status(MainActivity.profileUrls[1], "Joe Rogan", "30 minutes ago"));
 		statusList.add(new Status(MainActivity.profileUrls[2], "Elon Musk", "Today, 10:15 PM"));
 		statusList.add(new Status(MainActivity.profileUrls[0], "Arnold", "Today, 6:15 AM"));
+		statusList.add(new Status(MainActivity.profileUrls[3], "Conor McGregor", "5 minutes ago"));
+		statusList.add(new Status(MainActivity.profileUrls[1], "Joe Rogan", "30 minutes ago"));
+		statusList.add(new Status(MainActivity.profileUrls[2], "Elon Musk", "Today, 10:15 PM"));
+		statusList.add(new Status(MainActivity.profileUrls[0], "Arnold", "Today, 6:15 AM"));
+		statusList.add(new Status(MainActivity.profileUrls[3], "Conor McGregor", "5 minutes ago"));
+		statusList.add(new Status(MainActivity.profileUrls[1], "Joe Rogan", "30 minutes ago"));
+		statusList.add(new Status(MainActivity.profileUrls[2], "Elon Musk", "Today, 10:15 PM"));
+		statusList.add(new Status(MainActivity.profileUrls[0], "Arnold", "Today, 6:15 AM"));
 		
 		rvStatus.setAdapter(adapter);
 	
