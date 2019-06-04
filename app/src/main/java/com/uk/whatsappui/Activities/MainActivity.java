@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 	
 	private static final String TAG = "MainActivity";
 	
+	//Random image urls
 	public static final String[] profileUrls = {"https://blog.rackspace.com/wp-content/uploads/2018/09/pumping-iron-arnold-schwarzenegger-1-1108x0-c-default-696x522.jpg",
 		"https://www.rollingstone.com/wp-content/uploads/2018/06/rs-213329-R1247_FEA_Rogen_A.jpg?crop=900:600&width=440",
 		"https://assets.entrepreneur.com/content/3x2/2000/20170118220227-GettyImages-471763092.jpeg",
@@ -40,6 +41,14 @@ public class MainActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
+		
+		initialize();
+		setUpViewPager();
+		
+	}
+	
+	private void initialize() {
+	
 		toolbar = findViewById(R.id.toolbar);
 		setSupportActionBar(toolbar);
 		
@@ -49,14 +58,18 @@ public class MainActivity extends AppCompatActivity {
 		mainFab = findViewById(R.id.mainFab);
 		miniFab = findViewById(R.id.miniFab);
 		
+		miniFab.setVisibility(View.GONE);               //Default
+		
+	}
+	
+	private void setUpViewPager() {
 		
 		adapter = new PagerAdapter(getSupportFragmentManager());
 		viewPager.setAdapter(adapter);
 		
-		miniFab.setVisibility(View.GONE);
 		
 		viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
-		viewPager.setCurrentItem(1);
+		viewPager.setCurrentItem(1);            //Default selection is chats screen
 		
 		tabLayout.addOnTabSelectedListener(new TabLayout.BaseOnTabSelectedListener() {
 			@Override
@@ -66,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
 					//Loading appropriate fragment just in case
 					viewPager.setCurrentItem(tab.getPosition());
 				}
-
+				
 				if (tab.getPosition() == 0) {   //Camera Fragment
 					tab.setIcon(getResources().getDrawable(R.drawable.ic_action_camera));
 					
@@ -99,6 +112,7 @@ public class MainActivity extends AppCompatActivity {
 			@Override
 			public void onTabUnselected(TabLayout.Tab tab) {
 				if (tab.getPosition() == 0) {
+					//Explicitly setting the camera icon in tablayout to a greyish color when unselected
 					tabLayout.getTabAt(0).setIcon(getResources().getDrawable(R.drawable.ic_action_camera_unselected));
 				}
 			}
@@ -110,7 +124,9 @@ public class MainActivity extends AppCompatActivity {
 		});
 		
 		
+		
 	}
+	
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

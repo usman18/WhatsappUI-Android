@@ -32,20 +32,37 @@ public class CallsFragment extends Fragment {
 	@Override
 	public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
 		super.onViewCreated(view, savedInstanceState);
-	
-		rvCalls = view.findViewById(R.id.rvCalls);
-		rvCalls.setLayoutManager(new LinearLayoutManager(getContext()));
 		
+		
+		initialize(view);
+		populateCalls();
+		setCallsAdapter();
+		
+	}
+	
+	private void initialize(View view) {
+		rvCalls = view.findViewById(R.id.rvCalls);
 		calls = new ArrayList<>();
 		
-		calls.add(new Call(MainActivity.profileUrls[0],"Arnold", "2:00 PM", Call.AUDIO));
+	}
+	
+	
+	private void populateCalls() {
+		//Population logic goes here
+		
+		calls.add(new Call(MainActivity.profileUrls[0], "Arnold", "2:00 PM", Call.AUDIO));
 		calls.add(new Call(MainActivity.profileUrls[2], "Elon", "Yesterday, 8:00 PM", Call.VIDEO));
 		calls.add(new Call("Rohan", "Yesterday, 10:15 AM", Call.AUDIO));
 		
+	}
+	
+	private void setCallsAdapter() {
 		
+		rvCalls.setLayoutManager(new LinearLayoutManager(getContext()));
 		callsAdapter = new CallsAdapter(getContext(), calls);
 		rvCalls.setAdapter(callsAdapter);
 		
-		
 	}
+	
+	
 }

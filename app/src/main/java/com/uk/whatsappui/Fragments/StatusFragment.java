@@ -34,27 +34,37 @@ public class StatusFragment extends Fragment {
 	public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
 		super.onViewCreated(view, savedInstanceState);
 		
-		statusList = new ArrayList<>();
+		initialize(view);
+		populateStatus();
+		setAdapter();
 		
+	}
+	
+	private void initialize(View view) {
+		
+		statusList = new ArrayList<>();
 		rvStatus = view.findViewById(R.id.rvStatus);
+		
+	}
+	
+	private void populateStatus() {
+		//Population logic goes here
+		
+		statusList.add(new Status(MainActivity.profileUrls[3], "Conor McGregor", "5 minutes ago"));
+		statusList.add(new Status(MainActivity.profileUrls[1], "Joe Rogan", "30 minutes ago"));
+		statusList.add(new Status(MainActivity.profileUrls[2], "Elon Musk", "Today, 10:15 PM"));
+		statusList.add(new Status(MainActivity.profileUrls[0], "Arnold", "Today, 6:15 AM"));
+		
+	}
+	
+	private void setAdapter() {
+		
 		rvStatus.setLayoutManager(new LinearLayoutManager(getContext()));
 		adapter = new StatusAdapter(getContext(), statusList);
 		
-		statusList.add(new Status(MainActivity.profileUrls[3], "Conor McGregor", "5 minutes ago"));
-		statusList.add(new Status(MainActivity.profileUrls[1], "Joe Rogan", "30 minutes ago"));
-		statusList.add(new Status(MainActivity.profileUrls[2], "Elon Musk", "Today, 10:15 PM"));
-		statusList.add(new Status(MainActivity.profileUrls[0], "Arnold", "Today, 6:15 AM"));
-		statusList.add(new Status(MainActivity.profileUrls[3], "Conor McGregor", "5 minutes ago"));
-		statusList.add(new Status(MainActivity.profileUrls[1], "Joe Rogan", "30 minutes ago"));
-		statusList.add(new Status(MainActivity.profileUrls[2], "Elon Musk", "Today, 10:15 PM"));
-		statusList.add(new Status(MainActivity.profileUrls[0], "Arnold", "Today, 6:15 AM"));
-		statusList.add(new Status(MainActivity.profileUrls[3], "Conor McGregor", "5 minutes ago"));
-		statusList.add(new Status(MainActivity.profileUrls[1], "Joe Rogan", "30 minutes ago"));
-		statusList.add(new Status(MainActivity.profileUrls[2], "Elon Musk", "Today, 10:15 PM"));
-		statusList.add(new Status(MainActivity.profileUrls[0], "Arnold", "Today, 6:15 AM"));
-		
 		rvStatus.setAdapter(adapter);
-	
-	
+		
 	}
+	
+	
 }

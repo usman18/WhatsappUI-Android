@@ -39,7 +39,7 @@
                         <android.support.design.widget.TabItem
                                 android:layout_width="100dp"
                                 android:layout_height="100dp"
-                                android:icon="@drawable/ic_action_camera"
+                                android:icon="@drawable/ic_action_camera_unselected"
                                 />
                         
                         <android.support.design.widget.TabItem
