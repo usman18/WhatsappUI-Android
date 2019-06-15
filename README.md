@@ -3,11 +3,7 @@
   
 ## ScreenShots
 
-<img height=600 width=320 src="https://github.com/usman18/WhatsappUI-Android/blob/master/Screenshots/Whatsapp1.JPG" hspace=60
-/>
-<img height=600 width=320 src="https://github.com/usman18/WhatsappUI-Android/blob/master/Screenshots/Whatsapp2.JPG"/> 
-<br><br><br><br>
-<img height=600 width=320 src="https://github.com/usman18/WhatsappUI-Android/blob/master/Screenshots/Whatsapp3.JPG" hspace=60/> 
+<img height=550 width=275 src="https://github.com/usman18/WhatsappUI-Android/blob/master/Screenshots/Whatsapp1.JPG"><img height=550 width=275 src="https://github.com/usman18/WhatsappUI-Android/blob/master/Screenshots/Whatsapp2.JPG" hspace=24/><img height=550 width=275 src="https://github.com/usman18/WhatsappUI-Android/blob/master/Screenshots/Whatsapp3.JPG"/> 
 
 
 ## Contributions
@@ -18,7 +14,3 @@ Contributions are always welcome. Please fork this repository and contribute usi
 - [Github](https://github.com/usman18)
 
 My email : uk32971@gmail.com
-
-
-  
-  
