@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
 			@Override
 			public void onTabUnselected(TabLayout.Tab tab) {
 				if (tab.getPosition() == 0) {
-					tabLayout.getTabAt(0).setIcon(getResources().getDrawable(R.drawable.ic_action_camera));
+					tabLayout.getTabAt(0).setIcon(getResources().getDrawable(R.drawable.ic_action_camera_unselected));
 				}
 			}
 			
