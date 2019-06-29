@@ -5,5 +5,8 @@
                 <attr name="textColor" format="color"/>
                 <attr name="metaTextColor" format="color"/>
                 <attr name="dividerColor" format="color"/>
+                <attr name="tabSelectedColor" format="color"/>
+                <attr name="tabUnselectedColor" format="color"/>
+                <attr name="iconColor" format="color"/>
         </declare-styleable>
 </resources>

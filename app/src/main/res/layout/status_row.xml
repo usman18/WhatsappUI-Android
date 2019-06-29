@@ -2,7 +2,7 @@
 <RelativeLayout android:id="@+id/chat_row_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#fafafa"
+        android:background="?attr/bgColor"
         android:paddingStart="12dp"
         android:paddingEnd="12dp"
         android:paddingTop="12dp"
@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:text="Robert Downey"
                 android:textStyle="bold"
-                android:textColor="#202020"
+                android:textColor="?attr/textColor"
                 android:textSize="15sp"
                 />
         
@@ -44,7 +44,7 @@
                 android:text="26 minutes ago"
                 android:ellipsize="end"
                 android:layout_marginEnd="6dp"
-                android:textColor="#737373"
+                android:textColor="?attr/metaTextColor"
                 android:maxLines="1"
                 android:layout_marginTop="1dp"
                 />
@@ -54,7 +54,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:orientation="horizontal"
-                android:background="#ebebeb"
+                android:background="?attr/dividerColor"
                 android:layout_marginStart="62dp"
                 android:layout_below="@id/profile_image"
                 />

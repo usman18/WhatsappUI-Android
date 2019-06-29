@@ -1,7 +1,9 @@
 package com.uk.whatsappui.Adapters;
 
 import android.content.Context;
+import android.content.res.ColorStateList;
 import android.support.annotation.NonNull;
+import android.support.v7.app.AppCompatDelegate;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -50,8 +52,19 @@ public class CallsAdapter extends RecyclerView.Adapter<CallsAdapter.CallsViewHol
 		
 		if (call.getType() == Call.AUDIO) {
 			callsViewHolder.missedCallType.setBackgroundResource(R.drawable.ic_action_calls_green);
+			
+			if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
+				callsViewHolder.missedCallType.setBackgroundTintList(ColorStateList.valueOf(context.getResources().getColor(R.color.colorAccent)));
+			}
+
 		}else if (call.getType() == Call.VIDEO) {
+			
 			callsViewHolder.missedCallType.setBackgroundResource(R.drawable.ic_action_video);
+			
+			if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
+				callsViewHolder.missedCallType.setBackgroundTintList(ColorStateList.valueOf(context.getResources().getColor(R.color.colorAccent)));
+			}
+			
 		}
 		
 		

@@ -29,17 +29,18 @@
                         android:id="@+id/tablayout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@color/colorPrimary"
+                        android:background="?attr/colorPrimary"
                         app:tabIndicatorHeight="3dp"
                         app:tabIndicatorColor="@color/white"
-                        app:tabSelectedTextColor="@color/white"
-                        app:tabTextColor="@color/tab_unselected"
+                        app:tabSelectedTextColor="?attr/tabSelectedColor"
+                        app:tabTextColor="?attr/tabUnselectedColor"
                         >
                         
                         <android.support.design.widget.TabItem
+                                android:id="@+id/CameraTab"
                                 android:layout_width="100dp"
                                 android:layout_height="100dp"
-                                android:icon="@drawable/ic_action_camera_unselected"
+                                android:icon="@drawable/ic_action_camera"
                                 />
                         
                         <android.support.design.widget.TabItem
@@ -87,7 +88,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|end"
                 android:layout_margin="16dp"
-                android:src="@drawable/ic_action_message"
+                android:src="@drawable/ic_message"
                 />
         
 </android.support.design.widget.CoordinatorLayout>

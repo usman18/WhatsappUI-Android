@@ -1,11 +1,13 @@
 package com.uk.whatsappui.Activities;
 
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.TabItem;
 import android.support.design.widget.TabLayout;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatDelegate;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
@@ -39,8 +41,10 @@ public class MainActivity extends AppCompatActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
+			setTheme(R.style.App_Dark);
+		}
 		setContentView(R.layout.activity_main);
-		
 		
 		initialize();
 		setUpViewPager();
@@ -53,6 +57,8 @@ public class MainActivity extends AppCompatActivity {
 		setSupportActionBar(toolbar);
 		
 		tabLayout = findViewById(R.id.tablayout);
+		
+		
 		viewPager = findViewById(R.id.viewpager);
 		
 		mainFab = findViewById(R.id.mainFab);
@@ -90,19 +96,19 @@ public class MainActivity extends AppCompatActivity {
 					
 					miniFab.setVisibility(View.GONE);
 					mainFab.setVisibility(View.VISIBLE);
-					mainFab.setImageResource(R.drawable.ic_action_message);
+					mainFab.setImageResource(R.drawable.ic_message);
 					
 				} else if (tab.getPosition() == 2) {    //Status Fragment
 					
 					miniFab.setVisibility(View.VISIBLE);
 					mainFab.setVisibility(View.VISIBLE);
-					mainFab.setImageResource(R.drawable.ic_action_camera);
+					mainFab.setImageResource(R.drawable.ic_photo_camera);
 					
 				} else if (tab.getPosition() == 3) {    //Calls Fragment
 					
 					miniFab.setVisibility(View.GONE);
 					mainFab.setVisibility(View.VISIBLE);
-					mainFab.setImageResource(R.drawable.ic_action_calls);
+					mainFab.setImageResource(R.drawable.ic_call);
 					
 				}
 				
@@ -112,8 +118,7 @@ public class MainActivity extends AppCompatActivity {
 			@Override
 			public void onTabUnselected(TabLayout.Tab tab) {
 				if (tab.getPosition() == 0) {
-					//Explicitly setting the camera icon in tablayout to a greyish color when unselected
-					tabLayout.getTabAt(0).setIcon(getResources().getDrawable(R.drawable.ic_action_camera_unselected));
+					tabLayout.getTabAt(0).setIcon(getResources().getDrawable(R.drawable.ic_action_camera));
 				}
 			}
 			

@@ -9,8 +9,34 @@
         </style>
         
         
-        <style name="App.Light" parent="AppTheme">
+        
+        
+        <style name="App.Light" parent="Theme.AppCompat.Light.NoActionBar">
+                <!-- Customize your theme here. -->
+                <item name="colorPrimary">@color/colorPrimary</item>
+                <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+                <item name="colorAccent">@color/colorAccent</item>
+                <item name="bgColor">@color/greyish_white</item>
+                <item name="textColor">@color/text_color_light</item>
+                <item name="metaTextColor">@color/mata_text_color_light</item>
+                <item name="dividerColor">@color/divider_light</item>
+                <item name="tabUnselectedColor">@color/tab_unselected</item>
+                <item name="tabSelectedColor">@color/white</item>
+                <item name="iconColor">@color/colorPrimary</item>
+        </style>
+        
+        
+        <style name="App.Dark" parent="AppTheme">
                 <item name="colorPrimary">@color/black</item>
+                <item name="colorPrimaryDark">@color/black</item>
+                <item name="colorAccent">@color/colorAccent</item>
+                <item name="bgColor">@color/black</item>
+                <item name="textColor">@color/white</item>
+                <item name="metaTextColor">@color/meta_text_color_dark</item>
+                <item name="dividerColor">@color/black</item>
+                <item name="tabUnselectedColor">@color/tab_unselected_dark</item>
+                <item name="tabSelectedColor">@color/white</item>
+                <item name="iconColor">@color/colorAccent</item>
         </style>
         
 
