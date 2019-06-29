@@ -7,7 +7,7 @@
 
 <br><br>
 
-<img height=550 width=275 src="https://github.com/usman18/WhatsappUI-Android/blob/master/Screenshots/WhatsappDark1.JPG"><img height=550 width=275 src="https://github.com/usman18/WhatsappUI-Android/blob/master/Screenshots/WhatsDark2.JPG" hspace=24/><img height=550 width=275 src="https://github.com/usman18/WhatsappUI-Android/blob/master/Screenshots/WhatsDark3.JPG"/> 
+<img height=550 width=275 src="https://github.com/usman18/WhatsappUI-Android/blob/master/Screenshots/WD1.JPG"><img height=550 width=275 src="https://github.com/usman18/WhatsappUI-Android/blob/master/Screenshots/WD2.JPG" hspace=24/><img height=550 width=275 src="https://github.com/usman18/WhatsappUI-Android/blob/master/Screenshots/WD3.JPG"/> 
 
 <br>
 
