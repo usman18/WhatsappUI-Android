@@ -2,11 +2,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto">
        
+        <item
+                android:id="@+id/imgDarkMode"
+                android:title="Dark Mode"
+                app:showAsAction="always"
+                android:icon="@drawable/ic_day"
+                />
+        
+        
        <item
                android:id="@+id/search"
                android:title="Search"
                app:showAsAction="always"
-               android:icon="@drawable/ic_action_search"
+               android:icon="@drawable/ic_search"
                />
        
         <item

@@ -1,17 +1,16 @@
 package com.uk.whatsappui.Activities;
 
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.TabItem;
 import android.support.design.widget.TabLayout;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatDelegate;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.uk.whatsappui.Adapters.PagerAdapter;
@@ -52,13 +51,11 @@ public class MainActivity extends AppCompatActivity {
 	}
 	
 	private void initialize() {
-	
+		
 		toolbar = findViewById(R.id.toolbar);
 		setSupportActionBar(toolbar);
 		
 		tabLayout = findViewById(R.id.tablayout);
-		
-		
 		viewPager = findViewById(R.id.viewpager);
 		
 		mainFab = findViewById(R.id.mainFab);
@@ -129,7 +126,6 @@ public class MainActivity extends AppCompatActivity {
 		});
 		
 		
-		
 	}
 	
 	
@@ -137,6 +133,42 @@ public class MainActivity extends AppCompatActivity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		MenuInflater inflater = getMenuInflater();
 		inflater.inflate(R.menu.mainscreen_menu, menu);
+		
+		//Updating Toolbar icon according to the Theme
+		MenuItem item = menu.findItem(R.id.imgDarkMode);
+		if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
+			item.setIcon(R.drawable.ic_day);
+		} else {
+			item.setIcon(R.drawable.ic_night);
+		}
+		
 		return super.onCreateOptionsMenu(menu);
+	}
+	
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		
+		switch (item.getItemId()) {
+			case R.id.imgDarkMode:
+				toggleTheme();
+				break;
+			
+			
+		}
+		return super.onOptionsItemSelected(item);
+	}
+	
+	private void toggleTheme() {
+		
+		if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
+			AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+		} else {
+			AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+		}
+		
+		this.finish();
+		startActivity(new Intent(this, this.getClass()));
+		
 	}
 }
