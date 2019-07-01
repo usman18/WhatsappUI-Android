@@ -20,6 +20,11 @@
                                 <category android:name="android.intent.category.LAUNCHER" />
                         </intent-filter>
                 </activity>
+                <activity
+                    android:name=".Activities.ProfileDialogActivity"
+                    android:theme="@style/Theme.AppCompat.Dialog"
+                    android:parentActivityName=".Activities.MainActivity" >
+                </activity>
         </application>
 
 </manifest>

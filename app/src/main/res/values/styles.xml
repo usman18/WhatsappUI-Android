@@ -23,6 +23,12 @@
                 <item name="tabUnselectedColor">@color/tab_unselected</item>
                 <item name="tabSelectedColor">@color/white</item>
                 <item name="iconColor">@color/colorPrimary</item>
+
+                <item name="android:windowSharedElementEnterTransition">
+                        @transition/change_image_transform</item>
+                <item name="android:windowSharedElementExitTransition">
+                        @transition/change_image_transform</item>
+
         </style>
         
         

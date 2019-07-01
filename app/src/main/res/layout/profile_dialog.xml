@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:scaleType="centerCrop"
+        android:id="@+id/profile_image"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:transitionName="=transition"/>
+
+    <LinearLayout
+        android:padding="12dp"
+        android:weightSum="4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_weight="1"
+            android:tint="@color/colorPrimaryDark"
+            android:src="@drawable/ic_action_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_weight="1"
+            android:src="@drawable/ic_action_calls_green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_weight="1"
+            android:src="@drawable/ic_action_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_weight="1"
+            android:src="@drawable/ic_action_info_outline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</LinearLayout>
