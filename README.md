@@ -21,6 +21,8 @@ Contributions are always welcome. Please fork this repository and contribute usi
 
 
 ## Lets become friends
+- [Medium](https://medium.com/@usman18)
+- [Instagram](https://www.instagram.com/usman__khan18/)
 - [Twitter](https://twitter.com/khan_usman_18)
 - [LinkedIn](https://www.linkedin.com/in/usman-khan-7b04b1138)
 - [Github](https://github.com/usman18)
