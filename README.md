@@ -11,7 +11,7 @@
 
 <br>
 
-<img height=550 width=300 hspace=120 src="https://github.com/usman18/WhatsappUI-Android/blob/master/Screenshots/ProfileDialogWhite.gif"><img height=550 width=300 src="https://github.com/usman18/WhatsappUI-Android/blob/master/Screenshots/ProfileDialogDark.gif">
+<img height=550 width=300 src="https://github.com/usman18/WhatsappUI-Android/blob/master/Screenshots/ProfileDialogWhite.gif"><img height=550 width=300 src="https://github.com/usman18/WhatsappUI-Android/blob/master/Screenshots/ProfileDialogDark.gif">
 
 
 <br><br>
